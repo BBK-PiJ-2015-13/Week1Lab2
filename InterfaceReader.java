@@ -5,9 +5,14 @@ import java.util.Scanner;
  */
 public class InterfaceReader {
     public static void main(String[] args) throws ClassNotFoundException {
+        //MyReader y = new MyReader();
+        //y.readInterface("AClass");
         Scanner scanner = new Scanner(System.in);
         String x = scanner.next();
-        System.out.println(java.lang.Class.forName(x));
+        Class [] f = java.lang.Class.forName(x).getInterfaces();
+        for (int i = 0; i<f.length; i++) {
+            System.out.println(f[i]);
+        }
     }
 
    // static
